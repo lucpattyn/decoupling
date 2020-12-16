@@ -71,7 +71,7 @@ int main(){
 		return d;
 	};   
 		
-	Shape rectShape("rectangle", Rect(4,4));
+	Shape rectShape("rectangle", Rect(4,3));
 	rectShape.areaCalculator = rectAreaCalculator;
 	
 	Shape circleShape("circle", Circle(1));
@@ -82,7 +82,7 @@ int main(){
 	shapes.push_back(circleShape);
 	
 	for(auto shape:shapes){
-		std::cout << "shape: " << shape.getShapeName() << ", area: " << rectShape.calculateArea() << std::endl;
+		std::cout << "shape: " << shape.getShapeName() << ", area: " << shape.calculateArea() << std::endl;
 	}
 	
 	return 0;
